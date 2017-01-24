@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E876E2A01E3291DB008E0C3E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E876E29E1E3291DB008E0C3E /* Model.xcdatamodeld */; };
 		E8C9C4C61E2E43E7008A9C2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9C4C51E2E43E7008A9C2F /* AppDelegate.swift */; };
 		E8C9C4CB1E2E43E8008A9C2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8C9C4C91E2E43E7008A9C2F /* Main.storyboard */; };
 		E8C9C4CD1E2E43E8008A9C2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C9C4CC1E2E43E8008A9C2F /* Assets.xcassets */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E876E29F1E3291DB008E0C3E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		E8C9C4C21E2E43E7008A9C2F /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C9C4C51E2E43E7008A9C2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8C9C4CA1E2E43E7008A9C2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 				E8C9C4DB1E2E4514008A9C2F /* ContactTableViewCell.swift */,
 				E8C9C4E11E2E9A8C008A9C2F /* ContactViewController.swift */,
 				E8C9C4DF1E2E4750008A9C2F /* Contact.swift */,
-				E876E29E1E3291DB008E0C3E /* Model.xcdatamodeld */,
 				E8C9C4CC1E2E43E8008A9C2F /* Assets.xcassets */,
 				E8C9C4CE1E2E43E8008A9C2F /* LaunchScreen.storyboard */,
 				E8C9C4D11E2E43E8008A9C2F /* Info.plist */,
@@ -154,7 +151,6 @@
 				E8C9C4D81E2E4422008A9C2F /* ContactTableViewController.swift in Sources */,
 				E8C9C4C61E2E43E7008A9C2F /* AppDelegate.swift in Sources */,
 				E8C9C4E21E2E9A8C008A9C2F /* ContactViewController.swift in Sources */,
-				E876E2A01E3291DB008E0C3E /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,20 +317,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E876E29E1E3291DB008E0C3E /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E876E29F1E3291DB008E0C3E /* Model.xcdatamodel */,
-			);
-			currentVersion = E876E29F1E3291DB008E0C3E /* Model.xcdatamodel */;
-			name = Model.xcdatamodeld;
-			path = ../Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E8C9C4BA1E2E43E7008A9C2F /* Project object */;
 }

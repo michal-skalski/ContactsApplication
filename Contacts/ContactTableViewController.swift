@@ -14,8 +14,12 @@ class ContactTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let savedContacts = loadContacts() {
+            contacts += savedContacts
+        } else {
+            loadSampleContacts()
+        }
         
-        loadSampleContacts()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -82,6 +86,7 @@ class ContactTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             contacts.remove(at: indexPath.row)
+            saveContacts()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -99,6 +104,7 @@ class ContactTableViewController: UITableViewController {
                 tableView.insertRows(at: [newIndexPath], with: .bottom)
             }
         }
+        saveContacts()
     }
     
 
@@ -134,6 +140,19 @@ class ContactTableViewController: UITableViewController {
         } else if segue.identifier == "AddItem" {
             print("adding item")
         }
+    }
+    
+    //saving contacts
+    func saveContacts() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(contacts, toFile: Contact.ArchiveURL.path)
+        
+        if !isSuccessfulSave {
+            print("Failed to save")
+        }
+    }
+    // loading contacts
+    func loadContacts() -> [Contact]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Contact.ArchiveURL.path) as? [Contact]
     }
     
     
